@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macáliston Gonçalves Da Silva</title>
+    <style>
+        .container {
+            display: grid;  /*obrigatório para trabalhar com grid*/
+        }
+
+        /*sobre o grid header*/
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #506E6A;
+        }
+
+        /*sobre o grid menu*/
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;
+            /*centraliza o menu*/
+            gap: 20px;
+        }
+
+        /*sobre imagem (grid)lateral*/
+        .imagem_mac {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        /*sobre o grid conteúdo*/
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+        /*sobre o grid rodapé*/
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #506E6A;
+            color: white;
+            text-align: center;
+        }
+
+        /*sobre modelo card (flexbox) - em linha e com quebra de linha*/
+        .card {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        /*sobre a lista*/
+        ul {
+            list-style-type: none;
+            color: #506E6A;
+        }
+
+        /*sobre links*/
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #506E6A 1px;
+        }
+
+        /*sobre itens da lista*/
+        li {
+            float: left;
+        }
+
+        /*efeito links*/
+        a:hover {
+            background-color: #506E6A;
+            color: white;
+        }
+
+        /*bordas arredondadas*/
+        .img {
+            border: 1px solid #ccc;
+            border-radius: 1rem;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /*tamanho das imagens conteúdo*/
+        .img img {
+            width: 125px;
+            height: 115px;
+        }
+
+        /*regra*/
+        @media all and (min-width: 35rem) {
+            body {
+                margin: 0 auto;
+            }
+
+           .img {
+                max-width: 28rem;
+                margin: 1rem;
+            }
+        }
+
+        /* media query para dispositivos móveis (responsividade)*/
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .imagem_mac {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container"> <!--Cabeçalho-->
+        <h1 style="color: white; text-align: center;">CV Macáliston G. Da Silva</h1>
+        <br>
+    </header>
+    <nav class="container menu"> <!--Menu-->
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper"> <!--Não semântica-->
+        <aside class="imagem_mac"> <!--Lateral-->
+            <img src="mac.jpg">
+            <div class="infos">
+                <p><strong>Atuação</strong> Consultor Independente</p>
+                <p><img src="whats.png"> 11 95555 2025</p>
+            </div>
+        </aside>
+        <section class=" principal"> <!--Conteúdo-->
+            <h1>
+                Trabalhos realizados
+            </h1>
+            <div class="card">
+                <div class="img">
+                    <img src="DyO.jpg">
+                    <div class="">
+                        <h3>Indústria farmacêutica</h3>
+                        <p>Análise do MES</p>
+                        <a href="https://doi.org/10.37610/dyo.v0i80.645" target="_blank">Leia aqui</a>
+                    </div>
+                </div>
+
+                <div class="img">
+                    <img src="BJPE.jpg">
+                    <div class="">
+                        <h3>Indústria aeroespacial</h3>
+                        <p>Aplicação do SLP</p>
+                        <a href="https://periodicos.ufes.br/bjpe/article/view/27331/18587" target="_blank">Leia aqui</a>
+                    </div>
+                </div>
+
+                <div class="img">
+                    <img src="Esp.jpg">
+                    <div class="">
+                        <h3>Serviços de marketing</h3>
+                        <p>Melhoria de processos</p>
+                        <a href="https://www.researchgate.net/publication/320042006_Acoes_de_melhoria_em_uma_agencia_de_marketing_digital_atraves_do_pensamento_sistemico_uma_pesquisa-acao" target="_blank">Leia aqui</a>
+                    </div>
+
+                </div>
+                <div class="img">
+                    <img src="PeP.jpg">
+                    <div class="">
+                        <h3>Indústria eletrônica</h3>
+                        <p>Modelo de otimização</p>
+                        <a href="https://www.researchgate.net/publication/308970325_Proposicao_de_um_modelo_de_otimizacao_para_programacao_da_producao_em_Sistema_Flexivel_de_Manufatura_FMS_com_tempos_de_setup_dependentes_da_sequencia_a_combinacao_de_esforcos_em_sequenciamento_e_tempo" target="_blank">Leia aqui</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="container"> <!--Rodapé-->
+        <h1> Desenvolvido para fins educacionais - ADS</h1>
+    </footer>
+    </footer>
+    </div>
+</body>
+
+</html>

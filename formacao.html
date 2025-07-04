@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macáliston Gonçalves Da Silva</title>
+    <style>
+        .container {
+            display: grid;  /*obrigatório para trabalhar com grid*/
+        }
+
+        /*sobre o grid header*/
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #506E6A;
+        }
+
+        /*sobre o grid menu*/
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;
+            /*centraliza o menu*/
+            gap: 20px;
+        }
+
+        /*sobre imagem (grid)lateral*/
+        .imagem_mac {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        /*sobre o grid conteúdo*/
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+        /*sobre o grid rodapé*/
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #506E6A;
+            color: white;
+            text-align: center;
+        }
+
+        /*sobre modelo card (flexbox) - em linha e com quebra de linha*/
+        .card {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        /*sobre a lista*/
+        ul {
+            list-style-type: none;
+            color: #506E6A;
+        }
+
+        /*sobre links*/
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #506E6A 1px;
+        }
+
+        /*sobre itens da lista*/
+        li {
+            float: left;
+        }
+
+        /*efeito links*/
+        a:hover {
+            background-color: #506E6A;
+            color: white;
+        }
+
+        /*bordas arredondadas*/
+        .img {
+            border: 1px solid #ccc;
+            border-radius: 1rem;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /*tamanho das imagens conteúdo*/
+        .img img {
+            width: 125px;
+            height: 115px;
+        }
+
+        /*regra*/
+        @media all and (min-width: 35rem) {
+            body {
+                margin: 0 auto;
+            }
+
+            .img {
+                max-width: 28rem;
+                margin: 1rem;
+            }
+        }
+
+        /*media query para dispositivos móveis (responsividade)*/
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .imagem_mac {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container"> <!--Cabeçalho-->
+        <h1 style="color: white; text-align: center;">CV Macáliston G. Da Silva</h1>
+        <br>
+    </header>
+    <nav class="container menu"> <!--Menu-->
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper"> <!--Não semântica-->
+        <aside class="imagem_mac"> <!--Lateral-->
+            <img src="mac.jpg">
+            <div class="infos">
+                <p><strong>Atuação</strong> Consultor Independente</p>
+                <p><img src="whats.png"> 11 95555 2025</p>
+            </div>
+        </aside>
+        <section class=" principal"> <!--Conteúdo-->
+            <h1>
+                Formação
+            </h1>
+            <div class="card">
+                <div class="img">
+                    <img src="Uninter.jfif">
+                    <div class="">
+                        <h2>Graduação (prev. 2027/1)</h2>
+                        <p>CST em Análise e Desenvolvimento de Sistemas</p>
+                    </div>
+                </div>
+
+                <div class="img">
+                    <img src="liberato.png">
+                    <div class="">
+                        <h2>Técnico</h2>
+                        <p>Técnico em Eletrônica</p>
+                    </div>
+                </div>
+                
+                <div class="img">
+                    <img src="unisinos.png">
+                    <div class="">
+                        <h2>Extensão</h2>
+                        <p>Gestão de Projetos</p>
+                    </div>
+                
+                </div>
+                <div class="img">
+                    <img src="unilinguas.png">
+                    <div class="">
+                        <h2>Idioma</h2>
+                        <p>Inglês (intermediário)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="container"> <!--Rodapé-->
+        <h1> Desenvolvido para fins educacionais - ADS</h1>
+    </footer>
+    </footer>
+    </div>
+</body>
+
+</html>
